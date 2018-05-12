@@ -9,5 +9,19 @@ Conky QPL
  ```
  git clone https://github.com/CerNerCompany/QPL
  
- mv QPL ~/.conky
+ chmod +x launch
+ 
+ ./launch config -- Confing 
+ 
+ ./launch launch --Stating Conky
+ 
 ```
+
+# Updateing 
+
+``` 
+./launch update
+
+```
+
+
