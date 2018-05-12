@@ -80,9 +80,9 @@ ${offset 1000}${voffset 60}${font monofur:size=11}Processe :
 ${offset 1000}${voffset}${color #B1B411}${top name 1}${color #04376D} CPU : ${color #750000}${top mem 1}% 
 ${offset 1000}${voffset}${color #B1B411}${top name 2}${color #04376D} CPU : ${color #750000}${top mem 2}% 
 ${offset 1000}${voffset}${color #B1B411}${top name 3}${color #04376D} CPU : ${color #750000}${top mem 3}% 
-${offset 1000}${voffset 76}${color ffffff}${font monofur:size=11}${color fa6973}IP Address : ${font monofur:size=9}${color ffffff} ${addr eth0}
-${offset 1000}${voffset}${color ffffff}${font monofur:size=11}${color fa6973}Down : ${font monofur:size=9}${color ffffff}${downspeed eth0} k/s 
-${offset 1000}${voffset}${color fa6973}${font monofur:size=11}Up: ${font monofur:size=9}${color ffffff}${upspeed eth0} k/s
+${offset 1000}${voffset 76}${color ffffff}${font monofur:size=11}${color fa6973}IP Address : ${font monofur:size=9}${color ffffff} ${addr wlp2s0}
+${offset 1000}${voffset}${color ffffff}${font monofur:size=11}${color fa6973}Down : ${font monofur:size=9}${color ffffff}${downspeed wlp2s0} k/s 
+${offset 1000}${voffset}${color fa6973}${font monofur:size=11}Up: ${font monofur:size=9}${color ffffff}${upspeed wlp2s0} k/s
 
 
 
