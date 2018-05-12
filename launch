@@ -7,7 +7,7 @@ mkdir $HOME/.conky/QPL
 mv  Check_Network.lua ~/.conky/QPL
 mv TestProject ~/.conky/QPL
 mv source.txt ~/.conky/QPL
-
+mv ~/.git ~/.conky/QPL
 sleep 2
 echo -e "\e[1m\e[97m==> QPL Conky successfully installed ! "
 fi
