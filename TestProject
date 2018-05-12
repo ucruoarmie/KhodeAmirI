@@ -10,7 +10,7 @@ text_buffer_size 2048
 temperature_unit fahrenheit
 own_window yes
 own_window_type dock
-own_window_transparent yes
+own_window_transparent no
 own_window_argb_visual yes
 own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
 minimum_size 300 900
@@ -18,9 +18,9 @@ maximum_width 350
 border_inner_margin 0
 border_outer_margin 0
 # Adjust Resolution according to your screen
-minimum_size 1366 768
+minimum_size 300 900
 maximum_width 1366
-alignment tr
+alignment top_right
 gap_x 20
 gap_y 40
 #Graphics Settings #
@@ -49,15 +49,15 @@ own_window yes
 own_window_type normal
 own_window_argb_visual yes
 own_window_argb_value 0
-own_window_transparent yes
+own_window_transparent no
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 border_inner_margin 0
 border_outer_margin 0
-minimum_size 1024 300
+minimum_size 300 900
 maximum_width 1440
-alignment top_left
-gap_x 860
-gap_y 59
+alignment top_right
+gap_x 20
+gap_y 40
 draw_shades no
 draw_outline no
 draw_borders no
@@ -67,6 +67,7 @@ xftfont Santana:size=18
 xftalpha 0.8
 uppercase no
 default_color FFFFFF
+own_window_colour 000000
 TEXT
 ## Adjust the values offset as per your requirements
 ${offset 1000}${voffset -10}${color fa6973}${font hanamina:size=50}${time %H:%M}${font monofur}${offset -160}${voffset 30}${color EAEAEA}${font monofur:size=40}${time %a},${time %d} ${color EAEAEA}${font monofur:size=20}${time  %b}${offset -345}${voffset 60}${font monofur:size=10}${color FFA300}HD ${offset 9}$color${fs_free /} / ${fs_size /}${offset 30}${color FFA300}RAM ${offset 9}$color$mem / $memmax${offset 30}${color FFA300}CPU ${offset 9}$color${cpu cpu0}%
@@ -85,14 +86,14 @@ ${offset 1000}${voffset 65}${color ffffff}${font monofur:size=11}${color fa6973}
 ${offset 1000}${voffset}${color ffffff}${font monofur:size=11}${color fa6973}Down : ${font notosans:size=9}${color ffffff}${downspeed NETWORKTYPE} k/s
 ${offset 1000}${voffset}${color fa6973}${font monofur:size=11}Up : ${font notosans:size=9}${color ffffff}${upspeed NETWORKTYPE} k/s 
 ${offset 1000}${voffset}${color}Today        Yesterday       Week     Month ${color green}
-${offset 1000}${voffset}${execi 10 vnstat -i NETWORKTYPE | grep "today" | awk '{print $8" "substr ($9, 1, 1)}'}      ${execi 10 vnstat -i NETWORKTYPE | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}'}                ${execi 10 vnstat -i enp59s0 -w | grep "current week" | awk '{print $9" "substr ($10, 1, 1)}'}        ${execi 10 vnstat -i NETWORKTYPE -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($10, 1, 1)}'}
-${offset 1000}${voffset}${color ffffff}Total Upload : ${color green}${totalup NETWORKTYPE}
-${offset 1000}${voffset}${color ffffff}Total Download : ${color green}${totaldown NETWORKTYPE}
+${offset 1000}${voffset}${execi 10 vnstat -i NETWORKTYPE | grep "today" | awk '{print $8" "substr ($9, 1, 1)}'}      ${execi 10 vnstat -i NETWORKTYPE | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}'}        ${execi 10 vnstat -i NETWORKTYPE -w | grep "current week" | awk '{print $9" "substr ($10, 1, 1)}'}         ${execi 10 vnstat -i NETWORKTYPE -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($10, 1, 1)}'}
+${offset 1000}${voffset}${color ffffff}Total Upload  : ${color green}${totalup NETWORKTYPE}
+${offset 1000}${voffset}${color ffffff}Total Download  : ${color green}${totaldown NETWORKTYPE}
 
 
 
 
 
-	
+
 
 
