@@ -2,7 +2,6 @@
 function config(){
     echo -e "\e[107m                              Configing....                          \e[00;37;40m"
 if [ -d "$HOME/.conky" ];then
-git clone https://github.com/CerNerCompany/QPL
 cd QPL 
 mkdir ~/.conky/QPL
 mv  Check_Network.lua ~/.conky/QPL
