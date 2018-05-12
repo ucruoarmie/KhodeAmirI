@@ -1,7 +1,7 @@
 
-checkfile = io.open("~/.conky/QPL/TestProject","r")
-if not checkfile then
-os.execute("mv TestProject TestProject-backup")
+checkfile = io.open("~/.conky/QPL/ConkyQA","r")
+if checkfile then
+os.execute("mv ConkyQA ConkyQA-backup")
 ead = io.popen("ip route get 8.8.8.8")
 local riead = ead:read("*a") 
 sub = string.gsub(riead,'(.*)dev ', '')
