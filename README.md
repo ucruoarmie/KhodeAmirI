@@ -7,13 +7,21 @@ Conky QPL
 # Installation
 
  ```
- git clone https://github.com/CerNerCompany/QPL
+sudo apt-get update 
  
- chmod +x launch
+sudo apt-get upgrade
+
+sudo apt install vnstat 
+
+sudo apt install conky-manager
+
+git clone https://github.com/CerNerCompany/QPL
  
- ./launch config -- Confing 
+chmod +x launch
  
- ./launch launch --Stating Conky
+./launch config 
+ 
+./launch launch 
  
 ```
 
