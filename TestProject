@@ -72,7 +72,7 @@ TEXT
 ${offset 1000}${voffset -10}${color fa6973}${font hanamina:size=50}${time %H:%M}${font monofur}${offset -160}${voffset 30}${color EAEAEA}${font monofur:size=40}${time %a},${time %d} ${color EAEAEA}${font monofur:size=20}${time  %b}${offset -260}${voffset 30}${font monofur:pixelsize=10}${color FFA300}HD ${offset 9}$color${fs_free /} / ${fs_size /}${offset 30}${color FFA300}RAM ${offset 9}$color$mem / $memmax${offset 30}${color FFA300}CPU ${offset 9}$color${cpu cpu0}%
 ${offset 1000}${voffset 60}${font monofur:size=11:style=Bold}${color #B1B411}root : ${color #FFFF50}${font monofur:size=9}${fs_used /}/${fs_size /}
 ${offset 1000}${voffset}${font monofur:size=11:style=Bold}home : ${font monofur:size=9}${color #60B143}${fs_used /home}/${fs_size /home}
-${offset 1000}${voffset}${color ffffff}${font monofur:size=11:style=Bold}${color #FFFFB5} swap: ${color #CE00AF}${font monofur:size=8} ${swap} / ${swapfree}
+${offset 1000}${voffset}${color ffffff}${font monofur:size=11:style=Bold}${color #FFFFB5}swap : ${color #CE00AF}${font monofur:size=8} ${swap} / ${swapfree}
 ${offset 1000}${voffset 50}${color ffffff}${font monofur:size=11:style=Bold}${color #00F710}PC User : ${color #C1490A}${USER}
 ${offset 1000}${voffset}${color #FF9600}Linux ISO : ${color #AE3E88}${kernel}
 ${offset 1000}${voffset}${color FCD862}Uptime : ${color #7E1500}${uptime}${color ffffff}
@@ -82,7 +82,7 @@ ${offset 1000}${voffset}${color #B1B411}${top name 2}${color #04376D} CPU : ${co
 ${offset 1000}${voffset}${color #B1B411}${top name 3}${color #04376D} CPU : ${color #750000}${top mem 3}% 
 ${offset 1000}${voffset 76}${color ffffff}${font monofur:size=11}${color fa6973}IP Address : ${font monofur:size=9}${color ffffff} ${addr NETWORKTYPE}
 ${offset 1000}${voffset}${color ffffff}${font monofur:size=11}${color fa6973}Down : ${font monofur:size=9}${color ffffff}${downspeed NETWORKTYPE} k/s
-${offset 1000}${voffset}${color fa6973}${font monofur:size=11}Up: ${font monofur:size=9}${color ffffff}${upspeed NETWORKTYPE} k/s 
+${offset 1000}${voffset}${color fa6973}${font monofur:size=11}Up : ${font monofur:size=9}${color ffffff}${upspeed NETWORKTYPE} k/s 
 ${offset 1000}${voffset}${color}Today        Yesterday       Week     Month ${color green}
 ${offset 1000}${voffset}${execi 10 vnstat -i NETWORKTYPE | grep "today" | awk '{print $8" "substr ($9, 1, 1)}'}      ${execi 10 vnstat -i NETWORKTYPE | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}'}                ${execi 10 vnstat -i enp59s0 -w | grep "current week" | awk '{print $9" "substr ($10, 1, 1)}'}        ${execi 10 vnstat -i NETWORKTYPE -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($10, 1, 1)}'}
 ${offset 1000}${voffset}${color ffffff}Total: ${color green}${totaldown NETWORKTYPE} $color${alignr}Total: ${color green}${totalup NETWORKTYPE}
