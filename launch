@@ -40,6 +40,9 @@ case $1 in
 config)
 config
 exit;;
+update)
+update
+exit;;
 launch)
 run
 exit;;
