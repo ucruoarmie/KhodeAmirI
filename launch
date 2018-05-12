@@ -4,9 +4,9 @@ function config(){
 if [ -d "$HOME/.conky" ];then
 cd QPL 
 mkdir $HOME/.conky/QPL
-mv  Check_Network.lua $HOME/.conky/QPL
-mv TestProject $HOME/.conky/QPL
-mv source.txt $HOME/.conky/QPL
+mv  Check_Network.lua ~/.conky/QPL
+mv TestProject ~/.conky/QPL
+mv source.txt ~/.conky/QPL
 
 sleep 2
 echo -e "\e[1m\e[97m==> QPL Conky successfully Downloaded ! "
