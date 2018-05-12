@@ -36,6 +36,7 @@ fi
 function run(){
     echo -e "\e[107m                              Launching....                          \e[00;37;40m"
 if [ -d "$HOME/.conky/QPL" ];then
+cd $HOME/.conky/QPL
 lua Check_Network.lua 
 conky-manager
 else
