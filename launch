@@ -9,7 +9,7 @@ mv TestProject ~/.conky/QPL
 mv source.txt ~/.conky/QPL
 
 sleep 2
-echo -e "\e[1m\e[97m==> QPL Conky successfully Downloaded ! "
+echo -e "\e[1m\e[97m==> QPL Conky successfully installed ! "
 fi
 }
 function update(){
