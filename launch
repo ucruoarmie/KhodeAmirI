@@ -10,15 +10,6 @@ mv source.txt ~/.conky/QPL
 
 sleep 2
 echo -e "\e[1m\e[97m==> QPL Conky successfully Downloaded ! "
-sudo apt install vnstat 
-sleep 3
-echo -e "\e[1m\e[97m==> vnstat Conky successfully Installed ! "
-else
-sudo apt-get update 
-sudo apt-get upgrade
-sudo apt install conky-manager
-seelp 2
-echo -e "\e[1m\e[97m==> Conky Manager successfully Installed ! "
 fi
 }
 function update(){
