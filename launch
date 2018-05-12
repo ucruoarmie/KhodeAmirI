@@ -1,0 +1,52 @@
+#Begin bash by AmirKalan
+function config(){
+    echo -e "\e[107m                              Configing....                          \e[00;37;40m"
+if [ -d "$HOME/.conky" ];then
+git clone https://github.com/CerNerCompany/QPL
+mv QPL ~/.conky
+sleep 2
+echo -e "\e[1m\e[97m==> QPL Conky successfully Downloaded ! "
+sudo apt install vnstat 
+sleelp 3
+echo -e "\e[1m\e[97m==> vnstat Conky successfully Installed ! "
+else
+sudo apt-get update 
+sudo apt-get upgrade
+sudo apt install conky-manager
+seelp 2
+echo -e "\e[1m\e[97m==> Conky Manager successfully Installed ! "
+fi
+}
+function update(){
+    echo -e "\e[107m                              Updateing....                          \e[00;37;40m"
+if [ -d "$HOME/.conky/QPL" ];then
+cd $HOME/.conky/QPL
+git pull
+sleep 2 
+lua Check_Network.lua
+else
+echo -e "\e[1m\e[97m==> Config Error ! "
+exit 0
+fi
+}
+function run(){
+    echo -e "\e[107m                              Launching....                          \e[00;37;40m"
+if [ -d "$HOME/.conky/QPL" ];then
+lua Check_Network.lua 
+conky-manager
+else
+echo -e "\e[1m\e[97m==> Config Error ! "
+
+exit 0
+fi
+}
+case $1 in
+config)
+config
+exit;;
+launch)
+run
+exit;;
+esac
+exit 0
+
