@@ -20,6 +20,5 @@ io.open("ConkyQA",'w'):write(type):close()
 ead = io.popen("sudo vnstat -u -i "..sub_2)
 print('Info: -> A new database has been created')
 print('network interfaces : '..sub_2)
-os.execute("sudo rm -rf TestProject")
 print('Config successfully Completed !')
 end
