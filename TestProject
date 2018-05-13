@@ -1,40 +1,5 @@
 #Begin Conky By AmirKaLan
-background yes
-update_interval 1
-cpu_avg_samples 2
-net_avg_samples 2
-override_utf8_locale yes
-double_buffer yes
-no_buffers yes
-text_buffer_size 2048
-temperature_unit fahrenheit
-own_window yes
-own_window_type dock
-own_window_transparent no
-own_window_argb_visual yes
-own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
-minimum_size 300 900
-maximum_width 350
-border_inner_margin 0
-border_outer_margin 0
-# Adjust Resolution according to your screen
-minimum_size 300 900
-maximum_width 1366
-alignment top_right
-gap_x 20
-gap_y 40
-#Graphics Settings #
-draw_shades no
-draw_outline no
-draw_borders no
-draw_graph_borders no
-#Text settings #
-use_xft yes
-xftfont monofur dreams:size=8
-xftalpha 0.5
-uppercase no
-temperature_unit celsius
-default_color FFFFFF
+#Conky Settings V 1.4
 background no
 update_interval 1
 cpu_avg_samples 2
@@ -43,57 +8,76 @@ override_utf8_locale yes
 double_buffer yes
 no_buffers yes
 text_buffer_size 10240
+alignment top_left
 imlib_cache_size 0
-own_window_class Conky
+#End Conky Settings
+# Window specifications 
 own_window yes
 own_window_type normal
 own_window_argb_visual yes
 own_window_argb_value 0
-own_window_transparent no
+own_window_transparent yes
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 border_inner_margin 0
 border_outer_margin 0
-minimum_size 300 900
-maximum_width 1440
+minimum_size 300 800
+maximum_width 1400
 alignment top_right
-gap_x 20
-gap_y 40
+gap_x 0
+gap_y 0
+#End Window specifications
+#Graphics settings 
 draw_shades no
 draw_outline no
 draw_borders no
 draw_graph_borders no
 use_xft yes
-xftfont Santana:size=18
+xftfont Santana:size=10
 xftalpha 0.8
 uppercase no
 default_color FFFFFF
+#Ended
 own_window_colour 000000
+lua_load ~/.conky/QPL/barras3.lua
+#lua_draw_hook_post main_bars
+
+lua_load  ~/.conky/QPL/box.lua
+#lua_draw_hook_pre main_box
+
 TEXT
-## Adjust the values offset as per your requirements
-${offset 1000}${voffset -10}${color fa6973}${font hanamina:size=50}${time %H:%M}${font monofur}${offset -160}${voffset 30}${color EAEAEA}${font monofur:size=40}${time %a},${time %d} ${color EAEAEA}${font monofur:size=20}${time  %b}${offset -345}${voffset 60}${font monofur:size=10}${color FFA300}HD ${offset 9}$color${fs_free /} / ${fs_size /}${offset 30}${color FFA300}RAM ${offset 9}$color$mem / $memmax${offset 30}${color FFA300}CPU ${offset 9}$color${cpu cpu0}%
-${offset 1000}${voffset 60}${font monofur:size=11:style=Bold}${color #B1B411}root : ${color #FFFF50}${font monofur:size=9}${fs_used /}/${fs_size /}
-${offset 1000}${voffset}${font monofur:size=11:style=Bold}home : ${font monofur:size=9}${color #60B143}${fs_used /home}/${fs_size /home}
-${offset 1000}${voffset}${color ffffff}${font monofur:size=11:style=Bold}${color #FFFFB5}swap : ${color #CE00AF}${font monofur:size=8} ${swap} / ${swapfree}
-${offset 1000}${voffset 50}${color ffffff}${font monofur:size=11:style=Bold}${color #00F710}PC User : ${color #C1490A}${USER}
-${offset 1000}${voffset}${color #FF9600}Linux ISO : ${color #AE3E88}${kernel}
-${offset 1000}${voffset}${color FCD862}Uptime : ${color #7E1500}${uptime}${color ffffff}
-${offset 1000}${voffset 60}${font monofur:size=11}Process : 
-${offset 1000}${voffset}${color #B1B411}${top name 1} ${color #04376D} CPU : ${color #750000}${top mem 1}% 
-${offset 1000}${voffset}${color #B1B411}${top name 2} ${color #04376D} CPU : ${color #750000}${top mem 2}% 
-${offset 1000}${voffset}${color #B1B411}${top name 3} ${color #04376D} CPU : ${color #750000}${top mem 3}% 
-${offset 1000}${voffset}${color #B1B411}${top name 4} ${color #04376D} CPU : ${color #750000}${top mem 4}% 
-${offset 1000}${voffset 65}${color ffffff}${font monofur:size=11}${color fa6973}IP Address : ${font notosans:size=10}${color ffffff} ${addr NETWORKTYPE}
-${offset 1000}${voffset}${color ffffff}${font monofur:size=11}${color fa6973}Down : ${font notosans:size=9}${color ffffff}${downspeed NETWORKTYPE} k/s
-${offset 1000}${voffset}${color fa6973}${font monofur:size=11}Up : ${font notosans:size=9}${color ffffff}${upspeed NETWORKTYPE} k/s 
-${offset 1000}${voffset}${color}Today            Yesterday            Week            Month ${color green}
-${offset 1000}${voffset}${execi 10 vnstat -i NETWORKTYPE | grep "today" | awk '{print $8" "substr ($9, 1, 1)}'}          ${execi 10 vnstat -i NETWORKTYPE | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}'}             ${execi 10 vnstat -i NETWORKTYPE -w | grep "current week" | awk '{print $9" "substr ($10, 1, 1)}'}         ${execi 10 vnstat -i NETWORKTYPE -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($10, 1, 1)}'}
-${offset 1000}${voffset}${color ffffff}Total Upload  : ${color green}${totalup NETWORKTYPE}
-${offset 1000}${voffset}${color ffffff}Total Download  : ${color green}${totaldown NETWORKTYPE}
+#Started Codeing
+${goto 5}${color fa6973}${font monofur:pixelsize=80}${time %H:%M:%S}
+${goto 159}${voffset -50}${font monofur}${color EAEAEA}${font monofur:size=20}${time %a},${time %d} ${color EAEAEA}${font monofur:size=20}${time  %b}
+
+${goto 50}${voffset -9}${font monofur:size=11}${color ba}Hard Disk : $color${fs_free /} / ${fs_size /}
+${goto 50}${color ba}RAM : $color$mem / $memmax
+${goto 50}${color ba}CPU : $color${cpu cpu0}%
+${goto 50}${font monofur:size=11:style=Bold}${color #B1B411}root : ${color #FFFF50}${font monofur:size=10}${fs_used /root}/${fs_size /root}
+${goto 50}${font monofur:size=11:style=Bold}home : ${font monofur:size=10}${color #50B143}${fs_used /home}/${fs_size /home}
+${goto 50}${color ffffff}${font monofur:size=11:style=Bold}${color #FFFFB5}swap : ${color #CE00AF}${font monofur:size=10} ${swap} / ${swapfree}
 
 
 
+${goto 50}${color ffffff}${font monofur:size=11:style=Bold}${color #00F710}PC User : ${color #C1490A}${USER}
+${goto 50}${color #FF9500}Linux KerNel : ${color #AE3E88}${kernel}
+${goto 50}${color FCD862}Uptime : ${color #990000}${uptime}${color ffffff}
 
 
+${goto 50}${color1}Top Processes:
+${goto 50}${color1}Name              PID    CPU%   MEM%
+${goto 50}${color #B1B411}${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1} 
+${goto 50}${color #B1B411}${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2} 
+${goto 50}${color #B1B411}${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
+${goto 50}${color #B1B411}${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4}
+${goto 50}${color #B1B411}${top name 5} ${top pid 5} ${top cpu 5} ${top mem 5} 
 
 
+${goto 50}${color ffffff}${font monofur:size=11}${color fa6973}IP Address : ${font notosans:size=10}${color ffffff} ${addr NETWORKTYPE}
+${goto 50}${color ffffff}${font monofur:size=11}${color fa6973}Network Interface : ${font notosans:size=10}${color ffffff} NETWORKTYPE
+${goto 50}${color ffffff}${font monofur:size=11}${color fa6973}Down : ${font notosans:size=9}${color ffffff}${downspeed NETWORKTYPE} k/s
+${goto 50}${color fa6973}${font monofur:size=11}Up : ${font notosans:size=9}${color ffffff}${upspeed NETWORKTYPE} k/s 
 
+${goto 50}${color}Today            Yesterday            Week            Month ${color green}
+${goto 50}${execi 10 vnstat -i NETWORKTYPE | grep "today" | awk '{print $8" "substr ($9, 1, 1)}'}                  ${execi 10 vnstat -i NETWORKTYPE | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}'}                              ${execi 10 vnstat -i NETWORKTYPE -w | grep "current week" | awk '{print $9" "substr ($10, 1, 1)}'}             ${execi 10 vnstat -i NETWORKTYPE -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($10, 1, 1)}'}
+${goto 50}${color ffffff}Total Upload  : ${color green}${totalup NETWORKTYPE}
+${goto 50}${color ffffff}Total Download  : ${color green}${totaldown NETWORKTYPE}
