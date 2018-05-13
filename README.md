@@ -6,8 +6,9 @@ Conky QPL
 
 # Installation
 
- ```
+
 In Debain Base Distros :
+```
 
     sudo apt-get update 
  
