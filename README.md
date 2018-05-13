@@ -29,7 +29,8 @@ In Fedora Base Distros :
 
 In Arch Base Distros :
     ```
-    sudo pacman -Syu
+    
+    sudo pacman -Syu
 
     sudo pacman -S vnstat
 
