@@ -26,10 +26,10 @@ In Fedora Base Distros :
 
     sudo yum install conky-manager
 
- ```
+
 In Arch Base Distros :
-    
-    sudo pacman -Syu
+    ```
+    sudo pacman -Syu
 
     sudo pacman -S vnstat
 
