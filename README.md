@@ -7,13 +7,35 @@ Conky QPL
 # Installation
 
  ```
-sudo apt-get update 
+In Debain Base Distros :
+
+    sudo apt-get update 
  
-sudo apt-get upgrade
+    sudo apt-get upgrade
 
-sudo apt install vnstat 
+    sudo apt install vnstat 
 
-sudo apt install conky-manager
+    sudo apt install conky-manager
+
+ ```
+In Fedora Base Distros :
+
+    sudo yum update
+
+    sudo yum install vnstat
+
+    sudo yum install conky-manager
+
+ ```
+In Arch Base Distros :
+    
+    sudo pacman -Syu
+
+    sudo pacman -S vnstat
+
+    sudo pacman -S conky-manager
+
+ ```
 
 git clone https://github.com/CerNerCompany/QPL
  
