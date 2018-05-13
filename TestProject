@@ -54,7 +54,6 @@ ${goto 40}${color ffffff}${font monofur:size=11:style=Bold}${color #00F710}PC Us
 ${goto 40}${color #FF9400}Linux Kernel : ${color #AE3E88}${kernel}
 ${goto 40}${color FCD862}Uptime : ${color 2FDBA8}${uptime}${color ffffff}
 
-
 ${goto 40}${color1}Top Processes:
 ${goto 40}${color F22D1B}Name              ${color F2AE2E}PID    ${color 65A68E}CPU%   ${color FF2151}MEM%
 ${goto 40}${color #B1B411}${top name 1} ${color ACF0F2}${top pid 1} ${color 84A3B2}${top cpu 1} ${color FF231C}${top mem 1} 
@@ -70,6 +69,6 @@ ${goto 40}${color ffffff}${font monofur:size=11}${color fa6973}Down : ${font not
 ${goto 40}${color fa6973}${font monofur:size=11}Up : ${font notosans:size=9}${color E8F9FF}${upspeed NETWORKTYPE} k/s 
 
 ${goto 40}${color}Today            Yesterday            Week            Month ${color green}
-${goto 40}${execi 10 vnstat -i NETWORKTYPE | grep "today" | awk '{print $8" "substr ($9, 1, 1)}'}                  ${execi 10 vnstat -i NETWORKTYPE | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}'}                              ${execi 10 vnstat -i NETWORKTYPE -w | grep "current week" | awk '{print $9" "substr ($10, 1, 1)}'}             ${execi 10 vnstat -i NETWORKTYPE -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($10, 1, 1)}'}
+${goto 40}d${execi 10 vnstat -i NETWORKTYPE | grep "today" | awk '{print $8" "substr ($9, 1, 1)}'}                     ${execi 10 vnstat -i NETWORKTYPE | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}'}                              ${execi 10 vnstat -i NETWORKTYPE -w | grep "current week" | awk '{print $9" "substr ($10, 1, 1)}'}                       ${execi 10 vnstat -i NETWORKTYPE -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($10, 1, 1)}'}
 ${goto 40}${color 1695A3}Total Upload  : ${color green}${totalup NETWORKTYPE}
 ${goto 40}${color 1695A3}Total Download  : ${color green}${totaldown NETWORKTYPE}
