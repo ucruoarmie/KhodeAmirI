@@ -1,6 +1,5 @@
 #Begin Conky By AmirKaLan
-#Conky Settings V 1.4
-background no
+background yes
 update_interval 1
 cpu_avg_samples 2
 net_avg_samples 2
@@ -9,7 +8,6 @@ double_buffer yes
 no_buffers yes
 text_buffer_size 10240
 alignment top_left
-imlib_cache_size 0
 #End Conky Settings
 # Window specifications 
 own_window yes
@@ -38,23 +36,17 @@ uppercase no
 default_color FFFFFF
 #Ended
 own_window_colour 000000
-lua_load ~/.conky/QPL/barras3.lua
-#lua_draw_hook_post main_bars
-
-lua_load  ~/.conky/QPL/box.lua
-#lua_draw_hook_pre main_box
-
 TEXT
 #Started Codeing
 ${goto 0}${color fa6973}${font monofur:pixelsize=80}${time %H:%M:%S}
 ${goto 140}${voffset -40}${font monofur}${color D9C8A9}${font monofur:size=20}${time %a},${time %d} ${color D9C8A9}${font monofur:size=20}${time  %b}
 
-${goto 40}${voffset -9}${font monofur:size=11}${color ba}Hard Disk : ${color 71A39D}${fs_free /} / ${fs_size /}
-${goto 40}${color ba}RAM : ${color 71A39D}$mem / $memmax
-${goto 40}${color ba}CPU : ${color 71A39D}${cpu cpu0}%
+${goto 40}${voffset -9}${font monofur:size=11}${color b318e2}Hard Disk : ${color 71A39D}${fs_free /} / ${fs_size /}
+${goto 40}${color b318e2}RAM : ${color 71A39D}$mem / $memmax
+${goto 40}${color b318e2}CPU : ${color 71A39D}${cpu cpu0}%
 ${goto 40}${font monofur:size=11:style=Bold}${color #B1B411}root : ${color #FFFF40}${font monofur:size=10}${fs_used /root} / ${fs_size /root}
 ${goto 40}${font monofur:size=11:style=Bold}home : ${font monofur:size=10}${color #40B143}${fs_used /home} / ${fs_size /home}
-${goto 40}${color ffffff}${font monofur:size=11:style=Bold}${color FF530D}swap : ${color #CE00AF}${font monofur:size=10} ${swap} / ${swapfree}
+${goto 40}${color ffffff}${font monofur:size=11:style=Bold}${color FF530D}swap : ${color b318e2}${font monofur:size=10} ${swap} / ${swapfree}
 
 
 
