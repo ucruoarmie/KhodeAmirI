@@ -49,8 +49,11 @@ exit 0
 fi
 }
 case $1 in
-config)
-config
+config-v1)
+configv1
+exit;;
+config-v2)
+configv2
 exit;;
 update)
 update
