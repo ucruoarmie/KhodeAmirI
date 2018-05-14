@@ -41,12 +41,10 @@ In Arch Base Distros :
 
 git clone https://github.com/CerNerCompany/QPL
  
-chmod +x launch
+ chmod +x launch
  
 ./launch config 
- 
-./launch launch 
- 
+  
 ```
 
 # Updateing 
@@ -55,5 +53,9 @@ chmod +x launch
 ./launch update
 
 ```
-
+ # Checking network interface and createing 'ConkyQA'
+ ```
+ ./launch launch
+ 
+ ```
 
