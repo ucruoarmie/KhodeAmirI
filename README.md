@@ -47,15 +47,16 @@ git clone https://github.com/CerNerCompany/QPL
   
 ```
 
-# Updateing 
 
-``` 
-./launch update
-
-```
  # Checking network interface and createing 'ConkyQA'
  ```
  ./launch launch
  
  ```
 
+# Updateing 
+
+``` 
+./launch update
+
+```
