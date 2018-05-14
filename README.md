@@ -1,7 +1,15 @@
 # QPL
 Conky QPL
 
-<div align="center"><a href="https://t.me/CerNerCompany"><img src="http://s9.picofile.com/file/8326270942/DeepinScreenshot_20180513230716.png" width="300"></a></div>
+<div align="center"><a href="QPL Version 1"><img src="http://s9.picofile.com/file/8326270942/DeepinScreenshot_20180513230716.png" width="300"></a></div>
+
+
+
+
+
+
+<div align="center"><a href="QPL Version 2"><img src="http://s9.picofile.com/file/8326382100/DeepinScreenshot_20180515000953.png
+" width="300"></a></div>
 
 
 # Installation
@@ -43,9 +51,24 @@ git clone https://github.com/CerNerCompany/QPL
  
  chmod +x launch
  
-./launch config 
   
 ```
+
+#Installing V1 
+
+```
+./launch configv1
+
+```
+
+#installing V2 
+
+```
+
+./launch configV2
+
+```
+
 
 
  # Checking network interface and createing 'ConkyQA'
