@@ -1,11 +1,23 @@
 #!/bin/bash
 #Begin bash by AmirKalan
-function config(){
+function configv1(){
     echo -e "\e[107m                              Configing....                          \e[00;37;40m"
 if [ -d "$HOME/.conky" ];then
 mkdir $HOME/.conky/QPL
 mv  Check_Network.lua ~/.conky/QPL
 mv TestProject ~/.conky/QPL
+mv source.txt ~/.conky/QPL
+mv .git ~/.conky/QPL
+sleep 2
+echo -e "\e[1m\e[97m==> QPL Conky successfully installed ! "
+fi
+}
+function configv2(){
+    echo -e "\e[107m                              Configing....                          \e[00;37;40m"
+if [ -d "$HOME/.conky" ];then
+mkdir $HOME/.conky/QPL
+mv  Check_Network.lua ~/.conky/QPL
+mv TestProject-v2 ~/.conky/QPL
 mv source.txt ~/.conky/QPL
 mv .git ~/.conky/QPL
 sleep 2
