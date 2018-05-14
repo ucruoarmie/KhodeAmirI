@@ -8,8 +8,6 @@ override_utf8_locale yes
 double_buffer yes
 no_buffers yes
 text_buffer_size 10240
-alignment top_right
-imlib_cache_size 0
 #End Conky Settings
 # Window specifications 
 own_window yes
@@ -23,6 +21,7 @@ border_outer_margin 0
 minimum_size 0 0
 maximum_width 0
 alignment top_right
+#alignment top_left
 gap_x 0
 gap_y 0
 #End Window specifications
@@ -42,9 +41,9 @@ TEXT
 #Started Codeing
 ${goto 0}${color fa6973}${font monofur:pixelsize=80}${time %H:%M:%S}
 ${goto 140}${voffset -50}${font monofur}${color D9C8A9}${font monofur:size=20}${time %a},${time %d} ${color D9C8A9}${font monofur:size=20}${time  %b}
-${goto 40}${voffset -1}${font monofur:size=11}${color ba}Hard Disk : ${color 71A39D}${fs_free /} / ${fs_size /}
-${goto 40}${color ba}RAM : ${color 71A39D}$mem / $memmax
-${goto 40}${color ba}CPU : ${color 71A39D}${cpu cpu0}%
+${goto 40}${voffset -1}${font monofur:size=11}${color e516a4}Hard Disk : ${color 71A39D}${fs_free /} / ${fs_size /}
+${goto 40}${color e516a4}RAM : ${color 71A39D}$mem / $memmax
+${goto 40}${color e516a4}CPU : ${color 71A39D}${cpu cpu0}%
 ${goto 40}${font monofur:size=11:style=Bold}${color #B1B411}root : ${color #FFFF40}${font monofur:size=10}${fs_used /root} / ${fs_size /root}
 ${goto 40}${font monofur:size=11:style=Bold}home : ${font monofur:size=10}${color #40B143}${fs_used /home} / ${fs_size /home}
 ${goto 40}${color ffffff}${font monofur:size=11:style=Bold}${color FF530D}swap : ${color #CE00AF}${font monofur:size=10} ${swap} / ${swapfree}
