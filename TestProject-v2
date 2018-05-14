@@ -1,0 +1,88 @@
+#Begin Conky By AmirKaLan
+#Conky Settings V 1.4
+background no
+update_interval 1
+cpu_avg_samples 2
+net_avg_samples 2
+override_utf8_locale yes
+double_buffer yes
+no_buffers yes
+text_buffer_size 10240
+#End Conky Settings
+# Window specifications 
+own_window_class Conky
+own_window yes
+own_window_type normal
+own_window_argb_visual yes
+own_window_argb_value 0
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+border_inner_margin 0
+border_outer_margin 300
+minimum_size 250 665
+maximum_width 0
+#alignment top_right
+alignment top_middle
+gap_x 0
+gap_y 0
+#End Window specifications
+#Graphics settings 
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+use_xft yes
+xftfont Santana:size=10
+xftalpha 0.8
+uppercase no
+default_color FFFFFF
+#Ended
+own_window_colour 000000
+TEXT
+#Started Codeing
+${goto 60}${voffset -250}${color ffffff}${font monofur:size=11:style=Bold}${color #00F710}PC : ${color #BDF271}${USER}
+${goto 490}${voffset -20}${color fa6973}${font monofur:pixelsize=100}${time %H:%M:%S}
+${goto 800}${font monofur}${color D9C8A9}${font monofur:size=20}${time %a},${time %d} ${color D9C8A9}${font monofur:size=20}${time  %b}
+
+${goto 60}${voffset -140}${font monofur:size=11}${color ff08a1}Hard Disk : ${color 71A39D}${fs_free /} / ${fs_size /}
+${goto 60}${color ff08a1}RAP : ${color 71A39D}$mem / $memmax
+${goto 60}${color ff08a1}CPU : ${color 71A39D}${cpu cpu0}% 
+${goto 60}${font monofur:size=11:style=Bold}${color #B1B411}ROOT : ${color #FFFF40}${font monofur:size=10}${fs_used /root} / ${fs_size /root}
+${goto 60}${font monofur:size=11:style=Bold}HOME : ${font monofur:size=10}${color #40B143}${fs_used /home} / ${fs_size /home}
+${goto 60}${color ffffff}${font monofur:size=11:style=Bold}${color FF530D}SWAP : ${color #CE00AF}${font monofur:size=10} ${swap} / ${swapfree}
+${goto 60}${color #FF9400}Linux Kernel : ${color #AE3E88}${kernel}
+${goto 60}${color FCD862}Uptime : ${color 2FDBA8}${uptime}${color ffffff}
+${goto 1000}${voffset -125}${color #B1B411}${color 00F710}Total Processes : ${color FFFF40}${processes}
+${goto 1000}${color FF530D}Top Processes:
+${goto 1000}${color F22D1B}Name              ${color F2AE2E}PID    ${color 65A68E}CPU%   ${color FF2151}MEM%
+${goto 1000}${color #B1B411}${top name 1} ${color ACF0F2}${top pid 1} ${color 84A3B2}${top cpu 1} ${color FF231C}${top mem 1} 
+${goto 1000}${color #B1B411}${top name 2} ${color ACF0F2}${top pid 2} ${color 84A3B2}${top cpu 2} ${color FF231C}${top mem 2} 
+${goto 1000}${color #B1B411}${top name 3} ${color ACF0F2}${top pid 3} ${color 84A3B2}${top cpu 3} ${color FF231C}${top mem 3}
+${goto 1000}${color #B1B411}${top name 4} ${color ACF0F2}${top pid 4} ${color 84A3B2}${top cpu 4} ${color FF231C}${top mem 4}
+${goto 1000}${color #B1B411}${top name 5} ${color ACF0F2}${top pid 5} ${color 84A3B2}${top cpu 5} ${color FF231C}${top mem 5} 
+
+${goto 60}${voffset 75}${color ffffff}${font monofur:size=11}${color fa6973}IP Address : $color${font Verana:size=8}${gw_ip}
+${goto 60}${color ffffff}${font monofur:size=11}${color fa6973}Network Address : ${font notosans:size=10}${color E8F9FF} ${addr NETWORKTYPE}
+${goto 60}${color ffffff}${font monofur:size=11}${color fa6973}Network Interface : ${font notosans:size=10}${color E8F9FF} NETWORKTYPE
+${goto 60}${color ffffff}${font monofur:size=11}${color fa6973}Down : ${font notosans:size=9}${color E8F9FF}${downspeed NETWORKTYPE} k/s
+${goto 60}${color fa6973}${font monofur:size=11}Up : ${font notosans:size=9}${color E8F9FF}${upspeed NETWORKTYPE} k/s 
+
+
+${goto 1000}${voffset -120}${color fa6973}Total open ports : ${color FFFF40}${tcp_portmon 1 65535 count}
+${goto 1000}${color 71A39D}${offset 10}Address${goto 1250}DPORT
+${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  0}${goto 1250}${tcp_portmon 1 65535 rport  0}
+${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  1}${goto 1250}${tcp_portmon 1 65535 rport  1}
+${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  2}${goto 1250}${tcp_portmon 2 65535 rport  2}
+${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  3}${goto 1250}${tcp_portmon 3 65535 rport  3}
+${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  4}${goto 1250}${tcp_portmon 4 65535 rport  4}
+${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  5}${goto 1250}${tcp_portmon 5 65535 rport  5}
+${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  6}${goto 1250}${tcp_portmon 6 65535 rport  6}
+${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  7}${goto 1250}${tcp_portmon 7 65535 rport  7}
+${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  8}${goto 1250}${tcp_portmon 8 65535 rport  8}
+${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  9}${goto 1250}${tcp_portmon 9 65535 rport  9}
+${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  10}${goto 1250}${tcp_portmon 10 65535 rport  10}
+${goto 60}${voffset 44}${color 1695A3}Total Upload  : ${color green}${totalup NETWORKTYPE}
+${goto 60}${color 1695A3}Total Download  : ${color green}${totaldown NETWORKTYPE}
+${goto 60}${color}Downloaded history : 
+${goto 60}${color}Today            Yesterday            Week            Month ${color green}
+${goto 60}${execi 10 vnstat -i NETWORKTYPE | grep "today" | awk '{print $8" "substr ($9, 1, 1)}'}${goto 135}12.21 M${execi 10 vnstat -i NETWORKTYPE | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}'}${goto 224}${execi 10 vnstat -i NETWORKTYPE -w | grep "current week" | awk '{print $9" "substr ($10, 1, 1)}'}${goto 290}${execi 10 vnstat -i NETWORKTYPE -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($10, 1, 1)}'}
