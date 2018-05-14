@@ -38,12 +38,6 @@ uppercase no
 default_color FFFFFF
 #Ended
 own_window_colour 000000
-lua_load ~/.conky/QPL/barras3.lua
-#lua_draw_hook_post main_bars
-
-lua_load  ~/.conky/QPL/box.lua
-#lua_draw_hook_pre main_box
-
 TEXT
 #Started Codeing
 ${goto 0}${color fa6973}${font monofur:pixelsize=80}${time %H:%M:%S}
