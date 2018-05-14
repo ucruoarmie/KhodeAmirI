@@ -70,6 +70,6 @@ ${color ffffff}${font monofur:size=11}${color fa6973}Down : ${font notosans:size
 ${color fa6973}${font monofur:size=11}Up : ${font notosans:size=9}${color E8F9FF}${upspeed NETWORKTYPE} k/s 
 
 ${color}Today            Yesterday            Week            Month ${color green}
-${execi 10 vnstat -i NETWORKTYPE | grep "today" | awk '{print $8" "substr ($9, 1, 1)}'}${goto 100}${execi 10 vnstat -i NETWORKTYPE | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}'}${goto 188}${execi 10 vnstat -i NETWORKTYPE -w | grep "current week" | awk '{print $9" "substr ($10, 1, 1)}'}${goto 255}${execi 10 vnstat -i NETWORKTYPE -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($10, 1, 1)}'}
+${execi 10 vnstat -i NETWORKTYPE | grep "today" | awk '{print $8" "substr ($9, 1, 1)}'}${goto 74}${execi 10 vnstat -i NETWORKTYPE | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}'}${goto 160}${execi 10 vnstat -i NETWORKTYPE -w | grep "current week" | awk '{print $9" "substr ($10, 1, 1)}'}${goto 230}${execi 10 vnstat -i NETWORKTYPE -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($10, 1, 1)}'}
 ${color 1695A3}Total Upload  : ${color green}${totalup NETWORKTYPE}
 ${color 1695A3}Total Download  : ${color green}${totaldown NETWORKTYPE}
