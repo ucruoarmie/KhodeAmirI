@@ -85,4 +85,4 @@ ${goto 60}${voffset 44}${color 1695A3}Total Upload  : ${color green}${totalup NE
 ${goto 60}${color 1695A3}Total Download  : ${color green}${totaldown NETWORKTYPE}
 ${goto 60}${color}Downloaded history : 
 ${goto 60}${color}Today            Yesterday            Week            Month ${color green}
-${goto 60}${execi 10 vnstat -i NETWORKTYPE | grep "today" | awk '{print $8" "substr ($9, 1, 1)}'}${goto 135}12.21 M${execi 10 vnstat -i NETWORKTYPE | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}'}${goto 224}${execi 10 vnstat -i NETWORKTYPE -w | grep "current week" | awk '{print $9" "substr ($10, 1, 1)}'}${goto 290}${execi 10 vnstat -i NETWORKTYPE -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($10, 1, 1)}'}
+${goto 60}${execi 10 vnstat -i wlp2s0 | grep "today" | awk '{print $8" "substr ($9, 1, 1)}'}${goto 135}${execi 10 vnstat -i wlp2s0 | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}'}${goto 224}${execi 10 vnstat -i wlp2s0 -w | grep "current week" | awk '{print $9" "substr ($10, 1, 1)}'}${goto 290}${execi 10 vnstat -i wlp2s0 -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($10, 1, 1)}'}
