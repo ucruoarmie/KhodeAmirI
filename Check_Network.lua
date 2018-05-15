@@ -9,13 +9,13 @@ function file_check(file_name)
     end
     return file_found
   end
-if file_check("~/.conky/QPL/TestProject") then
+if file_check("~/.conky/QPL/Project") then
 ead = io.popen("ip route get 8.8.8.8")
 local riead = ead:read("*a") 
 sub = string.gsub(riead,'(.*)dev ', '')
 sub_2 = string.gsub(sub,' src(.*)', '')
 -------------------------------------
-local type= io.open("TestProject",'r'):read('*a'):gsub("NETWORKTYPE",sub_2)
+local type= io.open("Project",'r'):read('*a'):gsub("NETWORKTYPE",sub_2)
 io.open("ConkyQA",'w'):write(type):close()
 ------------------------------------
 ead = io.popen("sudo vnstat -u -i "..sub_2)
