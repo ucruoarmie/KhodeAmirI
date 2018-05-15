@@ -14,7 +14,7 @@ QPL Version 2
 # Installation
 
 
-In Debain Base Distros :
+# In Debain Base Distros :
 ```
 
     sudo apt-get update 
@@ -26,7 +26,7 @@ In Debain Base Distros :
     sudo apt install conky-manager
 
  ```
-In Fedora Base Distros :
+# In Fedora Base Distros :
 
     sudo yum update
 
@@ -35,7 +35,7 @@ In Fedora Base Distros :
     sudo yum install conky-manager
 
 
-In Arch Base Distros :
+# In Arch Base Distros :
     ```
     
     sudo pacman -Syu
@@ -50,29 +50,15 @@ git clone https://github.com/CerNerCompany/QPL
  
  chmod +x launch
  
-  
+  ./launch config
 ```
 
-#Installing V1 
-
-```
-./launch configv1
-
-```
-
-#installing V2 
-
-```
-
-./launch configV2
-
-```
 
 
 
  # Checking network interface and createing 'ConkyQA'
  ```
- ./launch launch
+ ./launch run
  
  ```
 
