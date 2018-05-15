@@ -5,8 +5,8 @@ function config(){
 if [ -d "$HOME/.conky" ];then
 mkdir $HOME/.conky/QPL
 mv  Check_Network.lua ~/.conky/QPL
-mv TestProject ~/.conky/QPL
-mv TestProject-v2 ~/.conky/QPL
+mv Project ~/.conky/QPL
+mv Projectv2 ~/.conky/QPL
 mv source.txt ~/.conky/QPL
 mv .git ~/.conky/QPL
 sleep 2
@@ -40,7 +40,6 @@ fi
 case $1 in
 config)
 config
-exit;;
 exit;;
 update)
 update
