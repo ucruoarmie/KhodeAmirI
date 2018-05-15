@@ -1,22 +1,11 @@
 #!/bin/bash
 #Begin bash by AmirKalan
-function configv1(){
+function config(){
     echo -e "\e[107m                              Configing....                          \e[00;37;40m"
 if [ -d "$HOME/.conky" ];then
 mkdir $HOME/.conky/QPL
 mv  Check_Network.lua ~/.conky/QPL
 mv TestProject ~/.conky/QPL
-mv source.txt ~/.conky/QPL
-mv .git ~/.conky/QPL
-sleep 2
-echo -e "\e[1m\e[97m==> QPL Conky successfully installed ! "
-fi
-}
-function configv2(){
-    echo -e "\e[107m                              Configing....                          \e[00;37;40m"
-if [ -d "$HOME/.conky" ];then
-mkdir $HOME/.conky/QPL
-mv  Check_Network.lua ~/.conky/QPL
 mv TestProject-v2 ~/.conky/QPL
 mv source.txt ~/.conky/QPL
 mv .git ~/.conky/QPL
@@ -49,16 +38,14 @@ exit 0
 fi
 }
 case $1 in
-config-v1)
-configv1
+config)
+config
 exit;;
-config-v2)
-configv2
 exit;;
 update)
 update
 exit;;
-launch)
+start)
 run
 exit;;
 esac
