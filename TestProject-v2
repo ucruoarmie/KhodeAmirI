@@ -44,7 +44,7 @@ TEXT
 #Started Codeing
 ${goto 50}${voffset 60}${color ffffff}${font monofur:size=11:style=Bold}${color #00F710}PC : ${color #BDF271}${USER}
 ${goto 440}${voffset -20}${color fa6973}${font monofur:pixelsize=100}${time %H:%M:%S}
-${goto 800}${color D9C8A9}${font vazir:size=20}${time %a},${time %d} ${color D9C8A9}${font vazir:size=20}${time  %b}
+${goto 800}${color D9C8A9}${font monofur:size=20}${time %a},${time %d} ${color D9C8A9}${font monofur:size=20}${time  %b}
 ${goto 60}${voffset -140}${font monofur:size=11}${color ff08a1}Hard Disk : ${color 71A39D}${fs_free /} / ${fs_size /}
 ${goto 60}${color ff08a1}RAP : ${color 71A39D}$mem / $memmax
 ${goto 60}${color ff08a1}CPU : ${color 71A39D}${cpu cpu0}% 
