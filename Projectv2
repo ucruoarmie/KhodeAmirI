@@ -69,19 +69,21 @@ ${goto 60}${color ffffff}${font monofur:size=11}${color fa6973}Down : ${font not
 ${goto 60}${color fa6973}${font monofur:size=11}Up : ${font notosans:size=9}${color E8F9FF}${upspeed NETWORKTYPE} k/s 
 
 ${goto 1000}${voffset -120}${color fa6973}Total open ports : ${color FFFF40}${tcp_portmon 1 65535 count}
-${goto 1000}${color 71A39D}${offset 10}IP Address${goto 1250}DPORT
-${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  0}${goto 1250}${tcp_portmon 1 65535 rport  0}
+${goto 1000}${color 71A39D}${offset 10}IP Address${goto 1250}PORT
 ${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  1}${goto 1250}${tcp_portmon 1 65535 rport  1}
-${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  2}${goto 1250}${tcp_portmon 2 65535 rport  2}
-${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  3}${goto 1250}${tcp_portmon 3 65535 rport  3}
-${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  4}${goto 1250}${tcp_portmon 4 65535 rport  4}
-${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  5}${goto 1250}${tcp_portmon 5 65535 rport  5}
-${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  6}${goto 1250}${tcp_portmon 6 65535 rport  6}
-${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  7}${goto 1250}${tcp_portmon 7 65535 rport  7}
-${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  8}${goto 1250}${tcp_portmon 8 65535 rport  8}
-${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  9}${goto 1250}${tcp_portmon 9 65535 rport  9}
-${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  10}${goto 1250}${tcp_portmon 10 65535 rport  10}
-${goto 60}${voffset -10}${color 1695A3}Total Upload  : ${color green}${totalup NETWORKTYPE}
+${goto 1010}${color 56f736}${tcp_portmon 2 65535 rip  2}${goto 1250}${tcp_portmon 2 65535 rport  2}
+${goto 1010}${color 56f736}${tcp_portmon 3 65535 rip  3}${goto 1250}${tcp_portmon 3 65535 rport  3}
+${goto 1010}${color 56f736}${tcp_portmon 4 65535 rip  4}${goto 1250}${tcp_portmon 4 65535 rport  4}
+${goto 1010}${color 56f736}${tcp_portmon 5 65535 rip  5}${goto 1250}${tcp_portmon 5 65535 rport  5}
+${goto 1010}${color 56f736}${tcp_portmon 6 65535 rip  6}${goto 1250}${tcp_portmon 6 65535 rport  6}
+${goto 1010}${color 56f736}${tcp_portmon 7 65535 rip  7}${goto 1250}${tcp_portmon 7 65535 rport  7}
+${goto 1010}${color 56f736}${tcp_portmon 8 65535 rip  8}${goto 1250}${tcp_portmon 8 65535 rport  8}
+${goto 1010}${color 56f736}${tcp_portmon 9 65535 rip  9}${goto 1250}${tcp_portmon 9 65535 rport  9}
+${goto 1010}${color 56f736}${tcp_portmon 10 65535 rip  10}${goto 1250}${tcp_portmon 10 65535 rport  10}
+
+
+
+${goto 60}${voffset -50}${color 1695A3}Total Upload  : ${color green}${totalup NETWORKTYPE}
 ${goto 60}${color 1695A3}Total Download  : ${color green}${totaldown NETWORKTYPE}
 
 ${goto 60}${color B0E0E6}Download history : 
