@@ -46,7 +46,7 @@ ${goto 10}${voffset 29}${color ffffff}${font monofur:size=15:style=Bold}${color 
 ${goto 440}${voffset -40}${color fa6973}${font monofur:pixelsize=100}${time %H:%M:%S}
 ${goto 800}${voffset -16}${color D9C8A9}${font monofur:size=20}${time %a},${time %d} ${color D9C8A9}${font monofur:size=20}${time  %b}
 ${goto 60}${voffset -40}${font monofur:size=11}${color ff08a1}Hard Disk : ${color 71A39D}${fs_free /} / ${fs_size /}
-${goto 60}${color ff08a1}RAP : ${color 71A39D}$mem / $memmax
+${goto 60}${color ff08a1}RAM : ${color 71A39D}$mem / $memmax
 ${goto 60}${color ff08a1}CPU : ${color 71A39D}${cpu cpu0}% 
 ${goto 60}${font monofur:size=11:style=Bold}${color #B1B411}ROOT : ${color #FFFF40}${font monofur:size=10}${fs_used /root} / ${fs_size /root}
 ${goto 60}${font monofur:size=11:style=Bold}HOME : ${font monofur:size=10}${color #40B143}${fs_used /home} / ${fs_size /home}
@@ -83,6 +83,7 @@ ${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  9}${goto 1250}${tcp_portmo
 ${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  10}${goto 1250}${tcp_portmon 10 65535 rport  10}
 ${goto 60}${voffset -10}${color 1695A3}Total Upload  : ${color green}${totalup NETWORKTYPE}
 ${goto 60}${color 1695A3}Total Download  : ${color green}${totaldown NETWORKTYPE}
-${goto 60}${color}Downloaded history : 
-${goto 60}${color}Today            Yesterday            Week            Month ${color green}
+
+${goto 60}${color B0E0E6}Download history : 
+${goto 60}${color E6E6FA}Today            Yesterday            Week            Month ${color green}
 ${goto 60}${execi 10 vnstat -i NETWORKTYPE | grep "today" | awk '{print $8" "substr ($9, 1, 1)}'}${goto 135}${execi 10 vnstat -i NETWORKTYPE | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}'}${goto 224}${execi 10 vnstat -i NETWORKTYPE -w | grep "current week" | awk '{print $9" "substr ($10, 1, 1)}'}${goto 290}${execi 10 vnstat -i NETWORKTYPE -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($10, 1, 1)}'}
