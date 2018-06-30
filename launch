@@ -7,6 +7,7 @@ mkdir $HOME/.conky/QPL
 mv  Check_Network.lua ~/.conky/QPL
 mv Project ~/.conky/QPL
 mv Projectv2 ~/.conky/QPL
+mv Projectv3 ~/.conky/QPL
 mv source.txt ~/.conky/QPL
 mv .git ~/.conky/QPL
 sleep 2
