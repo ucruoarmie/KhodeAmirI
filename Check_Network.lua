@@ -24,6 +24,10 @@ print('Info: -> A new database has been created')
 print('network interfaces : '..sub_2)
 print('Config successfully Completed !')
 end
+if file_check("~/.conky/QPL/Projectv3") then
+local type = io.open("Projectv3",'r'):read('*a'):gsub("NETWORKTYPE",sub_2)
+io.open("ConkyQA-3",'w'):write(type):close()
+end
 if file_check("~/.conky/QPL/Projectv2") then
 local type = io.open("Projectv2",'r'):read('*a'):gsub("NETWORKTYPE",sub_2)
 io.open("ConkyQA-V2",'w'):write(type):close()
