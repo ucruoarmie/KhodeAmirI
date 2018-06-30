@@ -1,0 +1,67 @@
+
+###QPL 3###
+background yes
+cpu_avg_samples 1
+default_bar_size 200 10
+default_graph_size 200 100
+diskio_avg_samples 10
+double_buffer yes
+extra_newline no
+if_up_strictness address
+net_avg_samples 1
+no_buffers yes
+temperature_unit celsius
+text_buffer_size 2048
+short_units yes
+update_interval 1
+alignment middle_right
+gap_x 600
+gap_y 0
+minimum_size 550 550
+maximum_width 550
+border_inner_margin 0
+border_outer_margin 00
+border_width 0
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+own_window yes
+own_window_argb_value 0
+own_window_argb_visual yes
+own_window_colour 000000
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+own_window_type desktop
+own_window_transparent yes
+own_window_title system_conky
+max_text_width 0
+override_utf8_locale yes
+uppercase no
+use_spacer none
+use_xft yes
+xftfont Feena Casual:size=10
+xftalpha 1
+
+###Defining Colors###
+#default_color D6D5D4
+#default_outline_color 000000
+#default_shade_color 112422
+default_color FFFFFF
+default_outline_color 000000
+default_shade_color 000000
+color1 CFCFCF
+color2 121111
+color3 D91133
+color4 EF5A29
+color5 77B753
+color6 FFA300
+#color1 BBE81A
+#color2 121111
+#color3 00CFEB
+TEXT
+${font ADELE:bold:size=17}${exec cat /etc/lsb-release|grep ID|cut -d= -f2}  ${font ADELE:size=10}${execi 600 uname -r | cut -c 1-6 }
+${goto 35}${color 8A0D1C}${font Feena Casual:size=100}${time %I }${font Feena Casual:size=45}${color 000000}${time %A}#${color yellow}
+${color 000000}${goto 35}${voffset 55}${font Feena Casual:size=22}${time %d} ${font Feena Casual:size=65}${voffset -15}${time %B} ${font Feena Casual:size=22}${goto 65}${voffset 34}${time %Y}${font Feena Casual:size=100}${goto 155}${voffset -54}${color 8A0D1C}${time %M}${font Feena Casual:size=25}${color 000000} ${time %P}
+${goto 25}${font ADELE:bold:size=17}Mem:${color3} ${font ITC Avant Garde Gothic Pro:bold:size=15}$memperc%${color1}${font ADELE:bold:size=17}    \
+${color2}Cpu:${color3} ${font ITC Avant Garde Gothic Pro:Bold:size=15}${cpu cpu0}%${color1}${font ADELE:bold:size=17}    \
+${color2}Wifi: ${color3}${font ITC Avant Garde Gothic Pro:bold:size=15}${wireless_link_qual NETWORKTYPE}%${color1}${font ITC Avant Garde Gothic Pro:size=15}    \
