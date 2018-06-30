@@ -61,7 +61,7 @@ git clone https://github.com/CerNerCompany/QPL
 
  # Checking network interface and createing 'ConkyQA'
  ```
- ./launch run
+ ./launch start
  
  ```
 
