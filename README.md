@@ -14,6 +14,13 @@ Conky QPL
 <div align="center"><a href=""><img src="http://s9.picofile.com/file/8326382100/DeepinScreenshot_20180515000953.png" width="500"></a></div>
 
 
+
+# QPL Version 3
+
+<div align="center"><a href=""><img src="http://s8.picofile.com/file/8330540200/DeepinScreenshot_20180630152150.png" width="500"></a></div>
+
+
+
 # Installation
 
 
