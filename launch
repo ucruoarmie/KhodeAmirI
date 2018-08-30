@@ -4,11 +4,12 @@ function config(){
     echo -e "\e[107m                              Configing....                          \e[00;37;40m"
 if [ -d "$HOME/.conky" ];then
 mkdir $HOME/.conky/QPL
-mv  Check_Network.lua ~/.conky/QPL
+mv Check_Network.lua ~/.conky/QPL
 mv Project ~/.conky/QPL
 mv Projectv2 ~/.conky/QPL
 mv Projectv3 ~/.conky/QPL
 mv source.txt ~/.conky/QPL
+mv monofur.ttf ~/.conky/fonts
 mv .git ~/.conky/QPL
 sleep 2
 echo -e "\e[1m\e[97m==> QPL Conky successfully installed ! "
