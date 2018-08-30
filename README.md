@@ -34,6 +34,8 @@ Conky QPL
     sudo apt install vnstat 
 
     sudo apt install conky-manager
+    
+    sudo apt install lua5.2
 
  ```
 # In Fedora Base Distros :
@@ -43,6 +45,9 @@ Conky QPL
     sudo yum install vnstat
 
     sudo yum install conky-manager
+    
+    sudo yum install lua5.2
+
 
 
 # In Arch Base Distros :
@@ -53,14 +58,17 @@ Conky QPL
     sudo pacman -S vnstat
 
     sudo pacman -S conky-manager
+    
+    sudo pacmam -S lua5.2
+
 
  ```
 
-git clone https://github.com/CerNerCompany/QPL
+ git clone https://github.com/CerNerCompany/QPL
  
  chmod +x launch
  
-  ./launch config
+ ./launch config
 ```
 
 
