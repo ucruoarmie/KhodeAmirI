@@ -15,6 +15,24 @@ mv ./fonts/Feena* ~/.conky/fonts
 mv .git ~/.conky/QPL
 sleep 2
 echo -e "\e[1m\e[97m==> QPL Conky successfully installed ! "
+else
+echo -e "\e[1m\e[97m==> Installing Conky Manager ! "
+wget --no-check-certificate https://github.com/teejee2008/conky-manager/releases/download/v2.4/conky-manager-v2.4-amd64.run > 2>&1
+ chmod +x conky-manager-v2.4-amd64.run
+sudo ./conky-manager-v2.4-amd64.run
+    echo -e "\e[107m                              Configing....                          \e[00;37;40m"
+mkdir $HOME/.conky/QPL
+mv Check_Network.lua ~/.conky/QPL
+mv Project ~/.conky/QPL
+mv Projectv2 ~/.conky/QPL
+mv Projectv3 ~/.conky/QPL
+mv source.txt ~/.conky/QPL
+mv ./fonts/monofur.ttf ~/.conky/fonts
+mv ./fonts/ADELE.ttf ~/.conky/fonts
+mv ./fonts/Feena* ~/.conky/fonts
+mv .git ~/.conky/QPL
+sleep 2
+echo -e "\e[1m\e[97m==> QPL Conky successfully installed ! "
 fi
 }
 function update(){
