@@ -9,7 +9,9 @@ mv Project ~/.conky/QPL
 mv Projectv2 ~/.conky/QPL
 mv Projectv3 ~/.conky/QPL
 mv source.txt ~/.conky/QPL
-mv monofur.ttf ~/.conky/fonts
+mv ./fonts/monofur.ttf ~/.conky/fonts
+mv ./fonts/ADELE.ttf ~/.conky/fonts
+mv ./fonts/Feena* ~/.conky/fonts
 mv .git ~/.conky/QPL
 sleep 2
 echo -e "\e[1m\e[97m==> QPL Conky successfully installed ! "
