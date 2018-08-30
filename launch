@@ -17,7 +17,7 @@ sleep 2
 echo -e "\e[1m\e[97m==> QPL Conky successfully installed ! "
 else
 echo -e "\e[1m\e[97m==> Installing Conky Manager ! "
-wget --no-check-certificate https://github.com/teejee2008/conky-manager/releases/download/v2.4/conky-manager-v2.4-amd64.run > 2>&1
+wget --no-check-certificate'https://github.com/teejee2008/conky-manager/releases/download/v2.4/conky-manager-v2.4-amd64.run' > 2>&1
  chmod +x conky-manager-v2.4-amd64.run
 sudo ./conky-manager-v2.4-amd64.run
     echo -e "\e[107m                              Configing....                          \e[00;37;40m"
