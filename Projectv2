@@ -27,6 +27,8 @@ override_utf8_locale yes
 uppercase no
 use_spacer none
 use_xft yes
+gap_x 0
+gap_y 50
 border_inner_margin 0
 border_outer_margin 0
 draw_shades no
