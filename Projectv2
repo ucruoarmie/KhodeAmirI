@@ -1,57 +1,49 @@
-#Begin Conky By AmirKaLan
-#Conky Settings V 1.4
+###QPL 3###
 background no
-update_interval 1
-cpu_avg_samples 2
-net_avg_samples 2
-override_utf8_locale yes
-double_buffer yes
-no_buffers yes
-text_buffer_size 10240
-#End Conky Settings
-# Window specifications 
-own_window_class Conky
-own_window yes
-own_window_type normal
-own_window_transparent yes
-own_window_argb_visual yes
-own_window_argb_value 255
-override_utf8_locale yes
-own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-border_inner_margin 0
-border_outer_margin 0
-minimum_size 250 665
-
+cpu_avg_samples 1
+#default_bar_size 200 10
+minimum_size 700 900
 maximum_width 0
-#alignment top_right
+double_buffer yes
+extra_newline no
+if_up_strictness address
+net_avg_samples 1
+no_buffers yes
+temperature_unit celsius
+text_buffer_size 10240
+short_units yes
+update_interval 1
 alignment top_middle
-gap_x 0
-gap_y 0
-#End Window specifications
-#Graphics settings 
-draw_shades no
-draw_outline no
 draw_borders no
-draw_graph_borders no
-use_xft yes
-xftfont Freesans:pixelsize=9
-xftalpha 0.8
-uppercase no
-default_color FFFFFF
-#Ended
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+own_window yes
+own_window_argb_value 0
+own_window_argb_visual yes
 own_window_colour 000000
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+own_window_type desktop
+own_window_transparent yes
+own_window_title system_conky
+max_text_width 0
+override_utf8_locale yes
+uppercase no
+use_spacer none
+use_xft yes
 TEXT
 #Started Codeing
-${goto 10}${voffset 29}${color ffffff}${font monofur:size=15:style=Bold}${color #00F710}PC : ${color #BDF271}${USER}
-${goto 440}${voffset -40}${color fa6973}${font monofur:pixelsize=100}${time %H:%M:%S}
+${goto -10}${voffset 5}${color ffffff}${font ITC Avant Garde Gothic Pro:size=15}${color #00F710}${font ADELE:bold:size=17}PC : ${color #BDF271}${USER} | ${font ADELE:bold:size=17}${exec cat /etc/lsb-release|grep ID|cut -d= -f2}
+${goto 500}${voffset -20}${color fa6973}${font Feena Casual:size=60}${time %H:%M:%S}
 ${goto 800}${voffset -16}${color D9C8A9}${font monofur:size=20}${time %a},${time %d} ${color D9C8A9}${font monofur:size=20}${time  %b}
 ${goto 60}${voffset -40}${font monofur:size=11}${color ff08a1}Hard Disk : ${color 71A39D}${fs_free /} / ${fs_size /}
 ${goto 60}${color ff08a1}RAM : ${color 71A39D}$mem / $memmax
 ${goto 60}${color ff08a1}CPU : ${color 71A39D}${cpu cpu0}% 
+
+
 ${goto 60}${font monofur:size=11:style=Bold}${color #B1B411}ROOT : ${color #FFFF40}${font monofur:size=10}${fs_used /root} / ${fs_size /root}
 ${goto 60}${font monofur:size=11:style=Bold}HOME : ${font monofur:size=10}${color #40B143}${fs_used /home} / ${fs_size /home}
 ${goto 60}${color ffffff}${font monofur:size=11:style=Bold}${color FF530D}SWAP : ${color #CE00AF}${font monofur:size=10} ${swap} / ${swapfree}
-${goto 60}${color #FF9400}Linux Kernel : ${color #AE3E88}${kernel}
 ${goto 60}${color FCD862}Uptime : ${color 2FDBA8}${uptime}${color ffffff}
 ${goto 1000}${voffset -117}${color #B1B411}${color 00F710}Total Processes : ${color FFFF40}${processes}
 ${goto 1000}${color FF530D}Top Processes:
@@ -86,6 +78,3 @@ ${goto 1010}${color 56f736}${tcp_portmon 10 65535 rip  10}${goto 1250}${tcp_port
 ${goto 60}${voffset -50}${color 1695A3}Total Upload  : ${color green}${totalup NETWORKTYPE}
 ${goto 60}${color 1695A3}Total Download  : ${color green}${totaldown NETWORKTYPE}
 
-${goto 60}${color B0E0E6}Download history : 
-${goto 60}${color E6E6FA}Today            Yesterday            Week            Month ${color green}
-${goto 60}${execi 10 vnstat -i NETWORKTYPE | grep "today" | awk '{print $8" "substr ($9, 1, 1)}'}${goto 135}${execi 10 vnstat -i NETWORKTYPE | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}'}${goto 224}${execi 10 vnstat -i NETWORKTYPE -w | grep "current week" | awk '{print $9" "substr ($10, 1, 1)}'}${goto 290}${execi 10 vnstat -i NETWORKTYPE -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($10, 1, 1)}'}
