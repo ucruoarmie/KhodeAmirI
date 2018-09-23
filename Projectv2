@@ -38,7 +38,7 @@ draw_graph_borders no
 TEXT
 #Started Codeing
 ${goto -10}${voffset 5}${color ffffff}${font ITC Avant Garde Gothic Pro:size=15}${color #00F710}${font ADELE:bold:size=17}PC : ${color #BDF271}${USER} | ${font ADELE:bold:size=17}${exec cat /etc/lsb-release|grep ID|cut -d= -f2}
-${goto 500}${voffset -20}${color fa6973}${font Feena Casual:size=60}${time %H:%M:%S}
+${goto 530}${voffset -20}${color fa6973}${font Feena Casual:size=60}${time %H:%M:%S}
 ${goto 800}${voffset -16}${color D9C8A9}${font monofur:size=20}${time %a},${time %d} ${color D9C8A9}${font monofur:size=20}${time  %b}
 ${goto 60}${voffset -40}${font monofur:size=11}${color ff08a1}Hard Disk : ${color 71A39D}${fs_free /} / ${fs_size /}
 ${goto 60}${color ff08a1}RAM : ${color 71A39D}$mem / $memmax
