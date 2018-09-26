@@ -9,13 +9,13 @@ Conky QPL
 
 
 
-# QPL Version 2 
+# QPL Version 2 (updated !)
 
 <div align="center"><a href=""><img src="http://s9.picofile.com/file/8338031800/Screenshot_from_2018_09_23_13_23_46.png" width="500"></a></div>
 
 
 
-# QPL Version 3
+# QPL Version 3 
 
 <div align="center"><a href=""><img src="http://s8.picofile.com/file/8330540200/DeepinScreenshot_20180630152150.png" width="500"></a></div>
 
