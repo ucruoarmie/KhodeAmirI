@@ -15,7 +15,7 @@ mv .git ~/.conky/QPL
 cd $HOME/.conky/QPL
 mv Project .Project
 mv Projectv2  .Projectv2
-mv Projectv3 Projectv3
+mv Projectv3 .Projectv3
 }
 function config(){
     echo -e "\e[107m                              Configing....                          \e[00;37;40m"
