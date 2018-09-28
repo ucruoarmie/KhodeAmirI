@@ -1,8 +1,6 @@
 #!/bin/bash
 #Begin bash by AmirKalan
-function config(){
-    echo -e "\e[107m                              Configing....                          \e[00;37;40m"
-if [ -d "$HOME/.conky" ];then
+c1() {
 mkdir $HOME/.conky/QPL
 mv Check_Network.lua ~/.conky/QPL
 mv Project ~/.conky/QPL
@@ -12,7 +10,17 @@ mv source.txt ~/.conky/QPL
 mv ./fonts/monofur.ttf ~/.conky/fonts
 mv ./fonts/ADELE.ttf ~/.conky/fonts
 mv ./fonts/Feena* ~/.conky/fonts
+mv ./fonts ~/.conky/QPL
 mv .git ~/.conky/QPL
+cd $HOME/.conky/QPL
+mv Project .Project
+mv Projectv2  .Projectv2
+mv Projectv3 Projectv3
+}
+function config(){
+    echo -e "\e[107m                              Configing....                          \e[00;37;40m"
+if [ -d "$HOME/.conky" ];then
+c1()
 sleep 2
 echo -e "\e[1m\e[97m==> QPL Conky successfully installed ! "
 else
@@ -22,16 +30,7 @@ chmod +x conky-manager-v2.4-amd64.run
 sudo ./conky-manager-v2.4-amd64.run
     echo -e "\e[107m                              Configing....                          \e[00;37;40m"
 conky-manager
-mkdir $HOME/.conky/QPL
-mv Check_Network.lua ~/.conky/QPL
-mv Project ~/.conky/QPL
-mv Projectv2 ~/.conky/QPL
-mv Projectv3 ~/.conky/QPL
-mv source.txt ~/.conky/QPL
-mv ./fonts/monofur.ttf ~/.conky/fonts
-mv ./fonts/ADELE.ttf ~/.conky/fonts
-mv ./fonts/Feena* ~/.conky/fonts
-mv .git ~/.conky/QPL
+c1()
 sleep 2
 echo -e "\e[1m\e[97m==> QPL Conky successfully installed ! "
 fi
