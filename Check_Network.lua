@@ -8,14 +8,15 @@ end
 return file_found
 end
 File = {
-    'Project'
+    'Project',
    'Projectv2',
    'Projectv3'
 }
 ead = io.popen("ip route get 8.8.8.8");riead = ead:read("*a");sub = string.gsub(riead,'(.*)dev ', '');sub_2 = string.gsub(sub,' src(.*)', '')
 for i=1, #File do 
-
+if file_check(File[i]) then
 type= io.open(File[i],'r'):read('*a'):gsub("NETWORKTYPE",sub_2)
 io.open("ConkyQA"..i,'w'):write(type):close()
+end
 end
 ead = io.popen("sudo vnstat -u -i "..sub_2);print('network interfaces : '..sub_2);print('Info: -> A new database has been created');print('network interfaces : '..sub_2);print('Config successfully Completed !')
