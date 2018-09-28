@@ -20,7 +20,7 @@ mv Projectv3 Projectv3
 function config(){
     echo -e "\e[107m                              Configing....                          \e[00;37;40m"
 if [ -d "$HOME/.conky" ];then
-c1()
+c1
 sleep 2
 echo -e "\e[1m\e[97m==> QPL Conky successfully installed ! "
 else
@@ -30,7 +30,7 @@ chmod +x conky-manager-v2.4-amd64.run
 sudo ./conky-manager-v2.4-amd64.run
     echo -e "\e[107m                              Configing....                          \e[00;37;40m"
 conky-manager
-c1()
+c1
 sleep 2
 echo -e "\e[1m\e[97m==> QPL Conky successfully installed ! "
 fi
