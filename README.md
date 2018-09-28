@@ -86,3 +86,11 @@ Conky QPL
 ./launch update
 
 ```
+
+
+Company Channels:
+--------------------
+[CerNer Company](https://t.me/CerNerCompany)
+
+-------------------
+Support : [CerNer & Linux Errors](https://t.me/joinchat/Ix7AWEwh0QIdXNaA_oKnng)
