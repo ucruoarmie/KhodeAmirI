@@ -64,7 +64,7 @@ Conky QPL
 
  ```
 
- git clone https://github.com/CerNerCompany/QPL
+ git clone https://github.com/CerNerCompany/QPL && cd QPL
  
  chmod +x launch
  
