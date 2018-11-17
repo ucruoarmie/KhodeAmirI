@@ -6,8 +6,8 @@ mv Check_Network.lua ~/.conky/QPL
 mv Project ~/.conky/QPL
 mv Projectv2 ~/.conky/QPL
 mv Projectv3 ~/.conky/QPL
-mv Project4-1 ~/.conky/QPL
-mv Project4-2 ~/.conky/QPL
+mv ConkyQA4-1 ~/.conky/QPL
+mv ConkyQA4-2 ~/.conky/QPL
 mv source.txt ~/.conky/QPL
 mv ./fonts/monofur.ttf ~/.conky/fonts
 mv ./fonts/ADELE.ttf ~/.conky/fonts
