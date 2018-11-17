@@ -21,6 +21,11 @@ Conky QPL
 
 
 
+
+# QPL Version 4 Dual
+
+<div align="center"><a href=""><img src="http://s8.picofile.com/file/8343077834/VP.png" width="500"></a></div>
+
 # Installation
 
 
@@ -35,7 +40,11 @@ Conky QPL
 
     sudo apt install conky-manager
     
-    sudo apt install lua5.2
+    sudo apt install lua5.3
+    
+    sudo apt install hddtemp
+    
+    sudo apt install audacious
 
  ```
 # In Fedora Base Distros :
@@ -46,8 +55,11 @@ Conky QPL
 
     sudo yum install conky-manager
     
-    sudo yum install lua5.2
+    sudo yum install lua5.3
 
+    sudo yum install hddtemp
+    
+    sudo yum install audacious
 
 
 # In Arch Base Distros :
@@ -60,15 +72,15 @@ Conky QPL
     sudo pacman -S conky-manager
     
     sudo pacmam -S lua5.2
+    
+    sudo pacman -S hddtemp
+    
+    sudo pacman -S audacious
 
 
  ```
 
- git clone https://github.com/CerNerCompany/QPL && cd QPL
- 
- chmod +x launch
- 
- ./launch config
+ git clone https://github.com/CerNerCompany/QPL && cd QPL && chmod +x launch && ./launch config
 ```
 
 
@@ -92,5 +104,3 @@ Company Channels:
 --------------------
 [CerNer Company](https://t.me/CerNerCompany)
 
--------------------
-Support : [CerNer & Linux Errors](https://t.me/joinchat/Ix7AWEwh0QIdXNaA_oKnng)
