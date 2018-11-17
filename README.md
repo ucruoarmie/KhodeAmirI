@@ -80,7 +80,8 @@ Conky QPL
 
  ```
 
- git clone https://github.com/CerNerCompany/QPL && cd QPL && chmod +x launch && ./launch config
+ git clone https://github.com/CerNerCompany/QPL && cd QPL && chmod +x launch && ./launch config && ./launch start
+
 ```
 
 
