@@ -14,6 +14,7 @@ mv ./fonts/ADELE.ttf ~/.conky/fonts
 mv ./fonts/Feena* ~/.conky/fonts
 mv ./fonts ~/.conky/QPL
 mv .git ~/.conky/QPL
+mv *.png ~/.conky/QPL
 cd $HOME/.conky/QPL
 }
 function config(){
