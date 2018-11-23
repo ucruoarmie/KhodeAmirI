@@ -1,5 +1,5 @@
 #Begin Conky By AmirKaLan
-#Conky Settings V 1.4
+#Conky Settings V 2
 background no
 update_interval 1
 cpu_avg_samples 1
@@ -23,7 +23,7 @@ minimum_size 300 665
 maximum_width 0
 alignment top_right
 gap_x 0
-gap_y 0
+gap_y 50
 #End Window specifications
 #Graphics settings 
 draw_shades no
