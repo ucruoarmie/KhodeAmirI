@@ -1,47 +1,39 @@
-
-###QPL 3###
-background yes
-cpu_avg_samples 1
-default_bar_size 200 10
-default_graph_size 200 100
-diskio_avg_samples 10
-double_buffer yes
-extra_newline no
-if_up_strictness address
-net_avg_samples 1
-no_buffers yes
-temperature_unit celsius
-text_buffer_size 2048
-short_units yes
+#Begin Conky By AmirKaLan
+#Conky Settings V 3
+background no
 update_interval 1
-alignment middle_right
-gap_x 600
-gap_y 0
+cpu_avg_samples 1
+net_avg_samples 1
+override_utf8_locale yes
+double_buffer yes
+no_buffers yes
+text_buffer_size 10200
+alignment top_left
+#End Conky Settings
+# Window specifications 
+own_window yes
+own_window_type normal
+own_window_argb_visual yes
+own_window_argb_value 0
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+border_inner_margin 0
+border_outer_margin 0
 minimum_size 550 550
 maximum_width 550
-border_inner_margin 0
-border_outer_margin 00
-border_width 0
-draw_borders no
-draw_graph_borders yes
-draw_outline no
+alignment top_left
+gap_x 880
+gap_y 220
+#End Window specifications
+#Graphics settings 
 draw_shades no
-own_window yes
-own_window_argb_value 0
-own_window_argb_visual yes
-own_window_colour 000000
-own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
-own_window_type desktop
-own_window_transparent yes
-own_window_title system_conky
-max_text_width 0
-override_utf8_locale yes
-uppercase no
-use_spacer none
+draw_outline no
+draw_borders no
+draw_graph_borders no
 use_xft yes
-xftfont Feena Casual:size=10
-xftalpha 1
-
+xftfont Santana:size=10
+xftalpha 0.8
+uppercase no
 ###Defining Colors###
 #default_color D6D5D4
 #default_outline_color 000000
@@ -58,6 +50,7 @@ color6 FFA300
 #color1 BBE81A
 #color2 121111
 #color3 00CFEB
+own_window_colour 000000
 TEXT
 ${font ADELE:bold:size=17}${exec cat /etc/lsb-release|grep ID|cut -d= -f2}  ${font ADELE:size=10}${execi 600 uname -r | cut -c 1-6 }
 ${goto 35}${color 8A0D1C}${font Feena Casual:size=100}${time %I }${font Feena Casual:size=45}${color 000000}${time %A}#${color yellow}
