@@ -1,5 +1,5 @@
 #Begin Conky By AmirKaLan
-#Conky Settings V 2
+#Conky Settings V 1.4
 background no
 update_interval 1
 cpu_avg_samples 1
@@ -41,28 +41,48 @@ color2 FF4500
 color3 E8E7E3
 own_window_colour 000000
 TEXT
-${voffset 10}${goto 120}${font ADELE:bold:size=17}${exec cat /etc/lsb-release|grep ID|cut -d= -f2}
-${goto 120}${voffset 10}${font ADELE:bold:size=17}${USER}
-${hr 3}
-${goto 100}${font Ubuntu:size=17:style=italic}${time %A} ${time %I}
-${goto 100}${voffset -10}${font GE Inspira:size=84:italic}${time %H}
-${goto 100}${voffset -20}${font GE Inspira:size=84:}${time %M}
-${voffset -90}${goto 60}${font Ubuntu:size=17:style=italic}${time %Y}  ${time %B} ${time %d}
-${hr 3}
-${goto 119}${voffset -1}${font Helvetica Neue LT Com:Bold:size=15}Systems
-${hr 3}
-${goto 140}${voffset 2}${font GeosansLight:Bold:size=11}$acpitemp'C
-${image thero.png -p 100,447 -s 18x18}
-${goto 140}${voffset -5}${cpu cpu0}% / 100%${font GeosansLight:Bold:size=8}
-${image Chip.png -p 100,478 -s 20x20}
-${goto 140}${voffset 1}${font GeosansLight:Bold:size=10}$memfree / $memmax
-${image mirco.png -p 100,506 -s 20x20}
-${goto 140}${voffset 1}${font GeosansLight:Bold:size=10}${upspeed NETWORKTYPE} kb/s / ${totalup NETWORKTYPE}
-${image up.png -p 100,535 -s 20x20}
-${goto 140}${font GeosansLight:Bold:size=10}${downspeed NETWORKTYPE} kb/s / ${totaldown NETWORKTYPE}
-${image dwn.png -p 100,569 -s 20x20}
-${hr 3}
-${goto 100}Upload  : ${totalup NETWORKTYPE} 
+#Started Codeing
+${goto -10}${voffset 5}${color ffffff}${font ITC Avant Garde Gothic Pro:size=15}${color #00F710}${font ADELE:bold:size=17}PC : ${color #BDF271}${USER} | ${font ADELE:bold:size=17}${exec cat /etc/lsb-release|grep ID|cut -d= -f2}
+${goto 530}${voffset -20}${color fa6973}${font Feena Casual:size=60}${time %H:%M:%S}
+${goto 800}${voffset -16}${color D9C8A9}${font monofur:size=20}${time %a},${time %d} ${color D9C8A9}${font monofur:size=20}${time  %b}
+${goto 60}${voffset -40}${font monofur:size=11}${color ff08a1}Hard Disk : ${color 71A39D}${fs_free /} / ${fs_size /}
+${goto 60}${color ff08a1}RAM : ${color 71A39D}$mem / $memmax
+${goto 60}${color ff08a1}CPU : ${color 71A39D}${cpu cpu0}% 
 
-${goto 100}Download  : ${totaldown NETWORKTYPE}
-${hr 3}
+
+${goto 60}${font monofur:size=11:style=Bold}${color #B1B411}ROOT : ${color #FFFF40}${font monofur:size=10}${fs_used /root} / ${fs_size /root}
+${goto 60}${font monofur:size=11:style=Bold}HOME : ${font monofur:size=10}${color #40B143}${fs_used /home} / ${fs_size /home}
+${goto 60}${color ffffff}${font monofur:size=11:style=Bold}${color FF530D}SWAP : ${color #CE00AF}${font monofur:size=10} ${swap} / ${swapfree}
+${goto 60}${color FCD862}Uptime : ${color 2FDBA8}${uptime}${color ffffff}
+${goto 1000}${voffset -117}${color #B1B411}${color 00F710}Total Processes : ${color FFFF40}${processes}
+${goto 1000}${color FF530D}Top Processes:
+${goto 1000}${color F22D1B}Name              ${color F2AE2E}PID    ${color 65A68E}CPU%   ${color FF2151}MEM%
+${goto 1000}${color #B1B411}${top name 1} ${color ACF0F2}${top pid 1} ${color 84A3B2}${top cpu 1} ${color FF231C}${top mem 1} 
+${goto 1000}${color #B1B411}${top name 2} ${color ACF0F2}${top pid 2} ${color 84A3B2}${top cpu 2} ${color FF231C}${top mem 2} 
+${goto 1000}${color #B1B411}${top name 3} ${color ACF0F2}${top pid 3} ${color 84A3B2}${top cpu 3} ${color FF231C}${top mem 3}
+${goto 1000}${color #B1B411}${top name 4} ${color ACF0F2}${top pid 4} ${color 84A3B2}${top cpu 4} ${color FF231C}${top mem 4}
+${goto 1000}${color #B1B411}${top name 5} ${color ACF0F2}${top pid 5} ${color 84A3B2}${top cpu 5} ${color FF231C}${top mem 5} 
+
+${goto 60}${voffset 75}${color ffffff}${font monofur:size=11}${color fa6973}IP Address : $color${font Verana:size=8}${gw_ip}
+${goto 60}${color ffffff}${font monofur:size=11}${color fa6973}Network Address : ${font notosans:size=10}${color E8F9FF} ${addr NETWORKTYPE}
+${goto 60}${color ffffff}${font monofur:size=11}${color fa6973}Network Interface : ${font notosans:size=10}${color E8F9FF} NETWORKTYPE
+${goto 60}${color ffffff}${font monofur:size=11}${color fa6973}Down : ${font notosans:size=9}${color E8F9FF}${downspeed NETWORKTYPE} k/s
+${goto 60}${color fa6973}${font monofur:size=11}Up : ${font notosans:size=9}${color E8F9FF}${upspeed NETWORKTYPE} k/s 
+
+${goto 1000}${voffset -120}${color fa6973}Total open ports : ${color FFFF40}${tcp_portmon 1 65535 count}
+${goto 1000}${color 71A39D}${offset 10}IP Address${goto 1250}PORT
+${goto 1010}${color 56f736}${tcp_portmon 1 65535 rip  1}${goto 1250}${tcp_portmon 1 65535 rport  1}
+${goto 1010}${color 56f736}${tcp_portmon 2 65535 rip  2}${goto 1250}${tcp_portmon 2 65535 rport  2}
+${goto 1010}${color 56f736}${tcp_portmon 3 65535 rip  3}${goto 1250}${tcp_portmon 3 65535 rport  3}
+${goto 1010}${color 56f736}${tcp_portmon 4 65535 rip  4}${goto 1250}${tcp_portmon 4 65535 rport  4}
+${goto 1010}${color 56f736}${tcp_portmon 5 65535 rip  5}${goto 1250}${tcp_portmon 5 65535 rport  5}
+${goto 1010}${color 56f736}${tcp_portmon 6 65535 rip  6}${goto 1250}${tcp_portmon 6 65535 rport  6}
+${goto 1010}${color 56f736}${tcp_portmon 7 65535 rip  7}${goto 1250}${tcp_portmon 7 65535 rport  7}
+${goto 1010}${color 56f736}${tcp_portmon 8 65535 rip  8}${goto 1250}${tcp_portmon 8 65535 rport  8}
+${goto 1010}${color 56f736}${tcp_portmon 9 65535 rip  9}${goto 1250}${tcp_portmon 9 65535 rport  9}
+${goto 1010}${color 56f736}${tcp_portmon 10 65535 rip  10}${goto 1250}${tcp_portmon 10 65535 rport  10}
+
+
+
+${goto 60}${voffset -50}${color 1695A3}Total Upload  : ${color green}${totalup NETWORKTYPE}
+${goto 60}${color 1695A3}Total Download  : ${color green}${totaldown NETWORKTYPE}
