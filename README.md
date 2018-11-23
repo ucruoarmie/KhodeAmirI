@@ -2,9 +2,9 @@
 Conky QPL
 
 
-# QPL Version 1 (Update soon..)
+# QPL Version 1 (Updated)
 
-<div align="center"><a href=""><img src="http://s9.picofile.com/file/8326270942/DeepinScreenshot_20180513230716.png" width="500"></a></div>
+<div align="center"><a href=""><img src="http://s8.picofile.com/file/8343655434/Screenshot_20181123_211920.png" width="500"></a></div>
 
 
 
