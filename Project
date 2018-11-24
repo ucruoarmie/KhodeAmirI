@@ -46,7 +46,7 @@ ${goto 120}${voffset 10}${font ADELE:bold:size=17}${USER}
 ${hr 3}
 ${goto 100}${font Ubuntu:size=17:style=italic}${time %A} ${time %I}
 ${goto 100}${voffset -10}${font GE Inspira:size=84:italic}${time %H}
-${goto 100}${voffset -20}${font GE Inspira:size=84:}${time %M}
+${goto 100}${voffset -20}${font GE Inspira:size=84:italic}${time %M}
 ${voffset -90}${goto 60}${font Ubuntu:size=17:style=italic}${time %Y}  ${time %B} ${time %d}
 ${hr 3}
 ${goto 119}${voffset -1}${font Helvetica Neue LT Com:Bold:size=15}Systems
@@ -61,8 +61,4 @@ ${goto 140}${voffset 1}${font GeosansLight:Bold:size=10}${upspeed NETWORKTYPE} k
 ${image up.png -p 100,535 -s 20x20}
 ${goto 140}${font GeosansLight:Bold:size=10}${downspeed NETWORKTYPE} kb/s / ${totaldown NETWORKTYPE}
 ${image dwn.png -p 100,569 -s 20x20}
-${hr 3}
-${goto 100}Upload  : ${totalup NETWORKTYPE} 
 
-${goto 100}Download  : ${totaldown NETWORKTYPE}
-${hr 3}
