@@ -32,12 +32,14 @@ Conky QPL
 # In Debain Base Distros :
 ```
 
-    sudo apt-get update 
+    sudo apt update 
  
-    sudo apt-get upgrade
+    sudo apt upgrade
 
     sudo apt install vnstat 
-
+    
+    sudo apt install conky && conky-all
+    
     sudo apt install conky-manager
     
     sudo apt install lua5.3
@@ -52,6 +54,8 @@ Conky QPL
     sudo yum update
 
     sudo yum install vnstat
+
+    sudo yum install conky && conky-all
 
     sudo yum install conky-manager
     
@@ -68,6 +72,8 @@ Conky QPL
     sudo pacman -Syu
 
     sudo pacman -S vnstat
+
+    sudo pacman -S conky && conky-all
 
     sudo pacman -S conky-manager
     
