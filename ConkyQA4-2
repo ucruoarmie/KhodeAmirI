@@ -39,7 +39,7 @@ default_color FFFFFF
 own_window_colour 000000
 TEXT
 ${if_running audacious}${font} ${hr 1}
-${font ITC Avant Garde Gothic Pro:size=10}Title : ${exec audtool current-song-tuple-data artist} - ${color1}Album ${desktop_name}
+${font ITC Avant Garde Gothic Pro:size=10}Title : ${exec audtool current-song-tuple-data artist} 
 
 Total Music : ${exec audtool playlist-length}
 
