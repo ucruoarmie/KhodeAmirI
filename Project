@@ -53,7 +53,7 @@ ${goto 119}${voffset -1}${font Helvetica Neue LT Com:Bold:size=15}Systems
 ${hr 3}
 ${goto 140}${voffset 2}${font GeosansLight:Bold:size=11}${execi 60 hddtemp /dev/sda | cut -c 30-32}'C
 ${image thero.png -p 100,447 -s 18x18}
-${goto 140}${voffset -5}${cpu cpu0}% / 100%${font GeosansLight:Bold:size=8}
+${goto 140}${voffset -5}${cpu cpu0}% / 100%${font GeosansLight:Bold:size=8} - ${freq_g}Ghz
 ${image Chip.png -p 100,478 -s 20x20}
 ${goto 140}${voffset 1}${font GeosansLight:Bold:size=10}$mem / $memmax
 ${image mirco.png -p 100,506 -s 20x20}
