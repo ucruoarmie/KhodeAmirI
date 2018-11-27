@@ -16,6 +16,7 @@ mv ./fonts ~/.conky/QPL
 mv .git ~/.conky/QPL
 mv *.png ~/.conky/QPL
 cd $HOME/.conky/QPL
+sudo chmod +s /usr/sbin/hddtemp
 }
 function config(){
     echo -e "\e[107m                              Configing....                          \e[00;37;40m"
@@ -29,6 +30,7 @@ wget --no-check-certificate 'https://github.com/teejee2008/conky-manager/release
 chmod +x conky-manager-v2.4-amd64.run
 sudo ./conky-manager-v2.4-amd64.run
     echo -e "\e[107m                              Configing....                          \e[00;37;40m"
+    sleep 3
 conky-manager
 c1
 sleep 2
