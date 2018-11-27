@@ -38,17 +38,18 @@ default_color FFFFFF
 #Ended
 own_window_colour 000000
 TEXT
-${if_running audacious}${font} ${hr 1}
-${font ITC Avant Garde Gothic Pro:size=10}Title : ${exec audtool current-song-tuple-data artist} 
+${if_running audacious}${font}${hr 1}
+${font ITC Avant Garde Gothic Pro:size=10}${font GE Inspira:size=12:italic}Title : ${exec audtool current-song-tuple-data title} 
+
+Artist :  ${exec audtool current-song-tuple-data artist} 
 
 Total Music : ${exec audtool playlist-length}
 
 Volume : ${exec audtool get-volume}
 
-Total playlist : ${exec audtool audtool number-of-playlists}
+Year  : ${exec audtool current-song-tuple-data year}
 
-${color 0077ff}${audacious_bar 8} $color
-${exec audtool current-song-output-length}${goto 300}${exec audtool current-song-length}
+Length : ${exec audtool current-song-output-length} / ${exec audtool current-song-length}
 ${hr 1}
 ${else} ${font ITC Avant Garde Gothic Pro:size=10} ${color 8A0D1C}Audacious Music Player is OFF
 $endif
