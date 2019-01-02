@@ -32,7 +32,6 @@ xftfont Santana:size=10
 xftalpha 0.8
 uppercase no
 default_color FFFFFF
-#Ended
 color1 313233
 color2 FF4500
 color3 E8E7E3
