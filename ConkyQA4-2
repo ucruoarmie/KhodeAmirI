@@ -1,5 +1,4 @@
-#Begin Conky By AmirKaLan
-#Conky Settings V 1.4
+
 background no
 update_interval 1
 cpu_avg_samples 1
